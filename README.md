@@ -29,22 +29,25 @@ python get_toon_data.py
 #### function:  
 webcrawling: webcrawling function  
 linkimg: link the all webcrawling image at same episode  
-cutdetector_rough: cutdect rougly. get speech bubble, big cut dected image  
-cutdetector: final output cutdector   
+cutdetector_rough: cutdect rougly. get speech bubble, big cut detected image  
+cutdetector: final output cutdetector   
   
   
-#### output images:
+#### output images:  
+coming soon!    
+
 webcrawling:  
 linkimg:  
 cutdetector_rough:  
 cutdetector:  
+
   
   
 #### output directories:  
 
 		get_toon_data.py
 		chromedriver.exe
-            ├── webcrawlingimg
+            └── webcrawlingimg
                 └── Episode100
                     └── 0.jpg(webcrawling image)
                     └── 1.jpg(webcrawling image)
@@ -63,7 +66,7 @@ cutdetector:
 
   
 ## Webtoon-Segmentation  
-continue...  
+coming soon!
 
 
 ### Author(team players)  
