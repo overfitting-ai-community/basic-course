@@ -2,32 +2,31 @@
 
 ## Webtoon Image Segmentation  
 
-**First**, here is information about [webtoon literary property](https://m.help.naver.com/support/contents/contentsView.help?contentsNo=1846) of naver webtoon.  
+Here is information about [webtoon literary property](https://m.help.naver.com/support/contents/contentsView.help?contentsNo=1846) of naver webtoon.  
 please just use the code for research purposes, never distribute the toon data.  
 
 And then, We can provide the step 
 'Get Webtoon Image -> Webtoon-Segmentation -> Create Segmentation Datasets'
 
-**Second**, we created webcrawling and cut detector only use computer vision(no deep learning)  
+**First**, we created webcrawling and cut detector only use computer vision(no deep learning)  
 see more information, go to title ['Get Webtoon Image'](#get-webtoon-image)  
 
-**Third**, we learned segmentation model.  
+**Second**, we learned segmentation model.  
 see more information, go to title ['Webtoon-Segmentation'](#webtoon-segmentation)  
   
-**Fourth**, we created segmentation results. it can be used at colorization datasets, etc...   
-see more information, got to title ['Create Segmentation Results'](#create segmentation results)
+**Third**, we created segmentation results. it can be used at colorization datasets, etc...   
+see more information, got to title ['Create Segmentation Results'](#create-segmentation-results)
+  
 
 ## Get Webtoon Image  
 
 If you want to use the webtoon data, run 'get_toon_data.py'  
 
 ## Prerequisites  
-It need to download driver.exe.  
+It needs to download driver.exe.  
 If you use the chrome, you might use chromedriver.exe.  
 In this [here](https://chromedriver.chromium.org/downloads), you can download chromedriver with your same chrome version.  
 
-
-  
 
 ```
 pip install selenium
@@ -106,86 +105,86 @@ python get_toon_data.py
 #### experiment 1) Trained(Free draw + Love Revolution) -> Test(Free draw + Love Revolution)
 - Evaluation results for bbox:
 
-![bbox1](https://user-images.githubusercontent.com/56310078/115056462-dc128000-9f1d-11eb-8cb8-a866291ff459.png)
-![bbox2](https://user-images.githubusercontent.com/56310078/115056464-dd43ad00-9f1d-11eb-8142-afabd021bcdc.png)
-![bbox3](https://user-images.githubusercontent.com/56310078/115056466-dd43ad00-9f1d-11eb-8e18-79aa8a35b528.png)
+![bbox1](https://user-images.githubusercontent.com/56310078/115056462-dc128000-9f1d-11eb-8cb8-a866291ff459.png)  
+![bbox2](https://user-images.githubusercontent.com/56310078/115056464-dd43ad00-9f1d-11eb-8142-afabd021bcdc.png)  
+![bbox3](https://user-images.githubusercontent.com/56310078/115056466-dd43ad00-9f1d-11eb-8e18-79aa8a35b528.png)  
   
 - Evaludation results for Segm:
 
-![segm1](https://user-images.githubusercontent.com/56310078/115056469-dddc4380-9f1d-11eb-93ee-c1f4f8b2d5fb.png)
-![segm2](https://user-images.githubusercontent.com/56310078/115056471-dddc4380-9f1d-11eb-9edf-2d09a0b37840.png)
-![segm3](https://user-images.githubusercontent.com/56310078/115056473-de74da00-9f1d-11eb-9ab7-c6785634a255.png)
+![segm1](https://user-images.githubusercontent.com/56310078/115056469-dddc4380-9f1d-11eb-93ee-c1f4f8b2d5fb.png)  
+![segm2](https://user-images.githubusercontent.com/56310078/115056471-dddc4380-9f1d-11eb-9edf-2d09a0b37840.png)  
+![segm3](https://user-images.githubusercontent.com/56310078/115056473-de74da00-9f1d-11eb-9ab7-c6785634a255.png)  
 
 
 #### experiment 2) Trained(Free draw + Love Revolution) -> Test(Free draw)
 - Evaluation results for bbox:
 
-![bbox1](https://user-images.githubusercontent.com/56310078/115056644-10863c00-9f1e-11eb-94d6-cb8cdfdff8a2.png)
-![bbox2](https://user-images.githubusercontent.com/56310078/115056647-11b76900-9f1e-11eb-84cd-2a716050fb39.png)
-![bbox3](https://user-images.githubusercontent.com/56310078/115056649-11b76900-9f1e-11eb-89ab-3ade7d31b50f.png)
+![bbox1](https://user-images.githubusercontent.com/56310078/115056644-10863c00-9f1e-11eb-94d6-cb8cdfdff8a2.png)  
+![bbox2](https://user-images.githubusercontent.com/56310078/115056647-11b76900-9f1e-11eb-84cd-2a716050fb39.png)  
+![bbox3](https://user-images.githubusercontent.com/56310078/115056649-11b76900-9f1e-11eb-89ab-3ade7d31b50f.png)  
   
 - Evaludation results for Segm:
 
-![segm1](https://user-images.githubusercontent.com/56310078/115056651-124fff80-9f1e-11eb-9ec1-3a7973a60146.png)
-![segm2](https://user-images.githubusercontent.com/56310078/115056655-124fff80-9f1e-11eb-9bec-9285e909220a.png)
-![segm3](https://user-images.githubusercontent.com/56310078/115056656-12e89600-9f1e-11eb-9487-1f677c78b236.png)
+![segm1](https://user-images.githubusercontent.com/56310078/115056651-124fff80-9f1e-11eb-9ec1-3a7973a60146.png)  
+![segm2](https://user-images.githubusercontent.com/56310078/115056655-124fff80-9f1e-11eb-9bec-9285e909220a.png)  
+![segm3](https://user-images.githubusercontent.com/56310078/115056656-12e89600-9f1e-11eb-9487-1f677c78b236.png)  
 
 
 #### experiment 3) Trained(Free draw + Love Revolution) -> Test(Love Revolution)
 - Evaluation results for bbox:
 
-![bbox1](https://user-images.githubusercontent.com/56310078/115056748-2b58b080-9f1e-11eb-9ec2-4874aead2431.png)
-![bbox2](https://user-images.githubusercontent.com/56310078/115056752-2bf14700-9f1e-11eb-9081-7faa8c4a42e6.png)
-![bbox3](https://user-images.githubusercontent.com/56310078/115056754-2c89dd80-9f1e-11eb-9dac-2868cc55a94b.png)
+![bbox1](https://user-images.githubusercontent.com/56310078/115056748-2b58b080-9f1e-11eb-9ec2-4874aead2431.png)  
+![bbox2](https://user-images.githubusercontent.com/56310078/115056752-2bf14700-9f1e-11eb-9081-7faa8c4a42e6.png)  
+![bbox3](https://user-images.githubusercontent.com/56310078/115056754-2c89dd80-9f1e-11eb-9dac-2868cc55a94b.png)  
 
 - Evaludation results for Segm:
 
 
-![segm1](https://user-images.githubusercontent.com/56310078/115056757-2dbb0a80-9f1e-11eb-981c-4f2ebbb4c4dc.png)
-![segm2](https://user-images.githubusercontent.com/56310078/115056758-2dbb0a80-9f1e-11eb-8f83-7ad01a3fcdb4.png)
-![segm3](https://user-images.githubusercontent.com/56310078/115056759-2e53a100-9f1e-11eb-9ea8-5a5f9aeb9ee4.png)
+![segm1](https://user-images.githubusercontent.com/56310078/115056757-2dbb0a80-9f1e-11eb-981c-4f2ebbb4c4dc.png)  
+![segm2](https://user-images.githubusercontent.com/56310078/115056758-2dbb0a80-9f1e-11eb-8f83-7ad01a3fcdb4.png)  
+![segm3](https://user-images.githubusercontent.com/56310078/115056759-2e53a100-9f1e-11eb-9ea8-5a5f9aeb9ee4.png)  
 
 
 #### experiment 4) Trained(Only Free draw) -> Test(Only Free draw)
 - Evaluation results for bbox:
 
-![bbox1](https://user-images.githubusercontent.com/56310078/115056816-3f9cad80-9f1e-11eb-9923-1589f2487fae.png)
-![bbox2](https://user-images.githubusercontent.com/56310078/115056817-40cdda80-9f1e-11eb-8596-aa5a5f7289ea.png)
-![bbox3](https://user-images.githubusercontent.com/56310078/115056820-40cdda80-9f1e-11eb-92f5-18bcde94964b.png)
+![bbox1](https://user-images.githubusercontent.com/56310078/115056816-3f9cad80-9f1e-11eb-9923-1589f2487fae.png)  
+![bbox2](https://user-images.githubusercontent.com/56310078/115056817-40cdda80-9f1e-11eb-8596-aa5a5f7289ea.png)  
+![bbox3](https://user-images.githubusercontent.com/56310078/115056820-40cdda80-9f1e-11eb-92f5-18bcde94964b.png)  
 
 - Evaludation results for Segm:
 
-![segm1](https://user-images.githubusercontent.com/56310078/115056823-41667100-9f1e-11eb-8149-ec44feb9ee2c.png)
-![segm2](https://user-images.githubusercontent.com/56310078/115056824-41667100-9f1e-11eb-890a-4402d4bedeed.png)
-![segm3](https://user-images.githubusercontent.com/56310078/115056827-41ff0780-9f1e-11eb-91c6-3b4026687fba.png)
+![segm1](https://user-images.githubusercontent.com/56310078/115056823-41667100-9f1e-11eb-8149-ec44feb9ee2c.png)  
+![segm2](https://user-images.githubusercontent.com/56310078/115056824-41667100-9f1e-11eb-890a-4402d4bedeed.png)  
+![segm3](https://user-images.githubusercontent.com/56310078/115056827-41ff0780-9f1e-11eb-91c6-3b4026687fba.png)  
 
 
 #### experiment 5) Pretrained(Free draw) + Transfer learning(Love Revolution) -> Test(Love Revolution)
 - Evaluation results for bbox:
 
-![bbox1](https://user-images.githubusercontent.com/56310078/115056885-50e5ba00-9f1e-11eb-8db1-98a77495fe64.png)
-![bbox2](https://user-images.githubusercontent.com/56310078/115056889-5216e700-9f1e-11eb-942a-150d56d3bca2.png)
-![bbox3](https://user-images.githubusercontent.com/56310078/115056890-52af7d80-9f1e-11eb-96a8-0d54760eb26b.png)
+![bbox1](https://user-images.githubusercontent.com/56310078/115056885-50e5ba00-9f1e-11eb-8db1-98a77495fe64.png)  
+![bbox2](https://user-images.githubusercontent.com/56310078/115056889-5216e700-9f1e-11eb-942a-150d56d3bca2.png)  
+![bbox3](https://user-images.githubusercontent.com/56310078/115056890-52af7d80-9f1e-11eb-96a8-0d54760eb26b.png)  
 
 - Evaludation results for Segm:
 
-![segm1](https://user-images.githubusercontent.com/56310078/115056893-52af7d80-9f1e-11eb-9f79-818e42ae84b8.png)
-![segm2](https://user-images.githubusercontent.com/56310078/115056895-53481400-9f1e-11eb-835d-d6cbe3c6ed81.png)
-![segm3](https://user-images.githubusercontent.com/56310078/115056897-53481400-9f1e-11eb-9696-d16615e2356b.png)
+![segm1](https://user-images.githubusercontent.com/56310078/115056893-52af7d80-9f1e-11eb-9f79-818e42ae84b8.png)  
+![segm2](https://user-images.githubusercontent.com/56310078/115056895-53481400-9f1e-11eb-835d-d6cbe3c6ed81.png)  
+![segm3](https://user-images.githubusercontent.com/56310078/115056897-53481400-9f1e-11eb-9696-d16615e2356b.png)  
 
 
 #### experiment 6) Trained(Only Love Revolution) -> Test(Only Love Revolution)
 - Evaluation results for bbox:
 
-![bbox1](https://user-images.githubusercontent.com/56310078/115056982-707ce280-9f1e-11eb-9401-e95e229e9abd.png)
-![bbox2](https://user-images.githubusercontent.com/56310078/115056988-71ae0f80-9f1e-11eb-86aa-3d5d5847aede.png)
-![bbox3](https://user-images.githubusercontent.com/56310078/115056989-71ae0f80-9f1e-11eb-9532-58f7dfabbebf.png)
+![bbox1](https://user-images.githubusercontent.com/56310078/115056982-707ce280-9f1e-11eb-9401-e95e229e9abd.png)  
+![bbox2](https://user-images.githubusercontent.com/56310078/115056988-71ae0f80-9f1e-11eb-86aa-3d5d5847aede.png)  
+![bbox3](https://user-images.githubusercontent.com/56310078/115056989-71ae0f80-9f1e-11eb-9532-58f7dfabbebf.png)  
 
 - Evaludation results for Segm:
 
-![segm1](https://user-images.githubusercontent.com/56310078/115056991-7246a600-9f1e-11eb-8c35-e3374868ef00.png)
-![segm2](https://user-images.githubusercontent.com/56310078/115056992-7246a600-9f1e-11eb-808f-93b5d9408275.png)
-![segm3](https://user-images.githubusercontent.com/56310078/115056993-72df3c80-9f1e-11eb-8334-bd2ef12c72fb.png)
+![segm1](https://user-images.githubusercontent.com/56310078/115056991-7246a600-9f1e-11eb-8c35-e3374868ef00.png)  
+![segm2](https://user-images.githubusercontent.com/56310078/115056992-7246a600-9f1e-11eb-808f-93b5d9408275.png)  
+![segm3](https://user-images.githubusercontent.com/56310078/115056993-72df3c80-9f1e-11eb-8334-bd2ef12c72fb.png)  
 
 
 #### experiment 7) Pretrained(Love Revolution) + Transfer learning(Free draw) -> Test(Free draw)
@@ -196,9 +195,10 @@ python get_toon_data.py
 
 #### Examples of output images (experiment 1):
 
-- Trained(Free draw + Love Revolution) -> Test(Free draw + Love Revolution)
+- Results of Experiment 1(Trained(Free draw + Love Revolution) -> Test(Free draw + Love Revolution)) 
+- Free draw
 
-| Free draw prediction | Free draw label | 
+| model prediction | label | 
 |:---:|:---:|
 |![11661](https://user-images.githubusercontent.com/56310078/115060858-5560a180-9f23-11eb-9b3b-ad49ce8c7af1.jpg)|![11661](https://user-images.githubusercontent.com/56310078/115060892-5e517300-9f23-11eb-810c-4ae2ed1967f2.jpg)|
 |![12197](https://user-images.githubusercontent.com/56310078/115058443-3a406280-9f20-11eb-9d76-00dfcca0e0b4.jpg)|![12197](https://user-images.githubusercontent.com/56310078/115060274-a328da00-9f22-11eb-8130-379421202bf4.jpg)|
@@ -222,8 +222,9 @@ python get_toon_data.py
 |![48683](https://user-images.githubusercontent.com/56310078/115058490-44faf780-9f20-11eb-9e5e-1c8c48b44712.jpg)|![48683](https://user-images.githubusercontent.com/56310078/115060313-a91ebb00-9f22-11eb-8fae-20c426ece8b2.jpg)|
 |![53380](https://user-images.githubusercontent.com/56310078/115058491-45938e00-9f20-11eb-8945-8ca83beffb0f.jpg)|![53380](https://user-images.githubusercontent.com/56310078/115060315-a9b75180-9f22-11eb-853e-b165855cd132.jpg)|
 
+- Love revolution
 
-| Love revolution prediction | Love revolution label | 
+| model prediction | label | 
 |:---:|:---:|
 |![1288](https://user-images.githubusercontent.com/56310078/115059285-509aee00-9f21-11eb-9790-4ff6518cffdc.jpg)|![1288](https://user-images.githubusercontent.com/56310078/115059722-e767aa80-9f21-11eb-83ef-7651f1b9d8fb.jpg)|
 |![8181](https://user-images.githubusercontent.com/56310078/115059288-51338480-9f21-11eb-81a6-7fd5a1219e0c.jpg)|![8181](https://user-images.githubusercontent.com/56310078/115059725-e8004100-9f21-11eb-9a15-b7be4c55ec12.jpg)|
@@ -251,7 +252,7 @@ refer to the last cell of [detectron2 colab guide](#).
 | Free draw (only hair) | Love revolution (only shirts) | No trained webtoon (etc) |
 |:---:|:---:|:---:|
 | ![19028](https://user-images.githubusercontent.com/56310078/115044584-9bf8d080-9f10-11eb-9b3b-afc8515879d7.jpg)|![10435](https://user-images.githubusercontent.com/56310078/115045380-6b656680-9f11-11eb-9f5f-8d8604df12bd.jpg)|![12296](https://user-images.githubusercontent.com/56310078/115046022-fba3ab80-9f11-11eb-9dc1-55a1e286d463.jpg)||
-|![63842](https://user-images.githubusercontent.com/56310078/115044595-9ef3c100-9f10-11eb-85d8-aaca15c35b92.jpg)|![12280](https://user-images.githubusercontent.com/56310078/115045385-6c969380-9f11-11eb-8a52-e28b18a412d1.jpg)|![5233](https://user-images.githubusercontent.com/56310078/115046551-8c7a8700-9f12-11eb-9b91-ab98e5ce3fb0.jpg)|| 
+| ![63842](https://user-images.githubusercontent.com/56310078/115044595-9ef3c100-9f10-11eb-85d8-aaca15c35b92.jpg)|![12280](https://user-images.githubusercontent.com/56310078/115045385-6c969380-9f11-11eb-8a52-e28b18a412d1.jpg)|![5233](https://user-images.githubusercontent.com/56310078/115046551-8c7a8700-9f12-11eb-9b91-ab98e5ce3fb0.jpg)|| 
 | ![50152](https://user-images.githubusercontent.com/56310078/115044610-a1eeb180-9f10-11eb-8001-97049a71c0c4.jpg)|![20404](https://user-images.githubusercontent.com/56310078/115045438-76b89200-9f11-11eb-8b68-b15be23e8162.jpg)|![86848](https://user-images.githubusercontent.com/56310078/115046577-943a2b80-9f12-11eb-8ed6-0c298669f0f1.jpg)||
 | ![24992](https://user-images.githubusercontent.com/56310078/115044626-a61acf00-9f10-11eb-816f-83737f2d1478.jpg)|![38444](https://user-images.githubusercontent.com/56310078/115045455-7a4c1900-9f11-11eb-88f2-a2028d73ea1a.jpg)|![7649](https://user-images.githubusercontent.com/56310078/115045972-f3e40700-9f11-11eb-87d2-40115ecde7b6.jpg)||
 | ![28738](https://user-images.githubusercontent.com/56310078/115044551-9602ef80-9f10-11eb-8585-1f82c9d6bae0.jpg) |![33124](https://user-images.githubusercontent.com/56310078/115045464-7d470980-9f11-11eb-8f93-63db110e8a84.jpg)|![18688](https://user-images.githubusercontent.com/56310078/115045823-d9119280-9f11-11eb-9bef-3cc0bc3f41d9.jpg)||
@@ -268,8 +269,6 @@ refer to the last cell of [detectron2 colab guide](#).
 - 전체 모든 웹툰을 Robust하게 Segmentation 할 수 없다고 생각이 든다.
 - Segmentation을 바탕으로 진행한 자동채색 Task의 경우에도 하나의 웹툰에 대해서 오버피팅을 시켜야 그 웹툰만의 느낌을 잘 살려서 표현하지 않을까? 라는 생각에서 비롯된 실험들이다.
 - 모은 웹툰의 데이터셋은 한 웹툰에서도 회차가 진행될 수록 작가의 그림체가 바뀌는 것을 고려하였다.
-
-
 
 
 ## Author(team players)  
