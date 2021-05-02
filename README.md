@@ -272,7 +272,18 @@ refer to the last cell of [detectron2 colab guide](https://github.com/overfittin
 - 모은 웹툰의 데이터셋은 한 웹툰에서도 회차가 진행될 수록 작가의 그림체가 바뀌는 것을 고려하였다.
 
 
-## Author(team players)  
+## Team players  
 [nh9k](https://github.com/nh9k), [haechunchung](https://github.com/haechunchung), [minqukanq](https://github.com/minqukanq)  
   
+
+## Citing Detectron2
+We use detectron2 in our research
+
+    @misc{wu2019detectron2,
+      author =       {Yuxin Wu and Alexander Kirillov and Francisco Massa and
+                      Wan-Yen Lo and Ross Girshick},
+      title =        {Detectron2},
+      howpublished = {\url{https://github.com/facebookresearch/detectron2}},
+      year =         {2019}
+    }
 
