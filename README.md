@@ -238,16 +238,17 @@ python get_toon_data.py
 
 ### Download Pre-trained models
 
+Download pre-trained model from [Google Drive](https://drive.google.com/drive/folders/1CmxGzSGyCafVI5UpFFGUiAWSAh3BS3eR?usp=sharing)
 
 ### Run  
-- Here is the [Colab Notebook](#) to run Detectron2.
+- Here is the [Colab Notebook](https://github.com/overfitting-ai-community/basic-course/blob/main/Webtoon_Segmentation_Detectron2_Tutorial.ipynb) to run Detectron2.
 - Here is the [Colab Notebook](#) to run Mask-RCNN.
 
 ## Create Segmentation Results
 
 #### Examples of output images:
 
-refer to the last cell of [detectron2 colab guide](#).  
+refer to the last cell of [detectron2 colab guide](https://github.com/overfitting-ai-community/basic-course/blob/main/Webtoon_Segmentation_Detectron2_Tutorial.ipynb).  
 
 | Free draw (only hair) | Love revolution (only shirts) | No trained webtoon (etc) |
 |:---:|:---:|:---:|
