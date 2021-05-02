@@ -1,0 +1,8 @@
+hair
+shirt
+T-shirt
+pants
+skirt
+outer
+tie
+vest

@@ -1,0 +1,13 @@
+today: 3/4
+
+
+
+../Overfitting/webtoon_segmentation/dataset/label8_love_revolution/3/36966.json
+../Overfitting/webtoon_segmentation/dataset/label8_love_revolution/6/13143.json
+../Overfitting/webtoon_segmentation/dataset/label8_love_revolution/5/12241.json
+../Overfitting/webtoon_segmentation/dataset/label8_love_revolution/6/12602.json
+../Overfitting/webtoon_segmentation/dataset/label8_love_revolution/2/1288.json
+../Overfitting/webtoon_segmentation/dataset/label8_love_revolution/6/8181.json
+../Overfitting/webtoon_segmentation/dataset/label8_love_revolution/3/30354.json
+../Overfitting/webtoon_segmentation/dataset/label8_love_revolution/3/34234.json
+../Overfitting/webtoon_segmentation/dataset/label8_love_revolution/2/16515.json

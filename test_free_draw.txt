@@ -1,0 +1,26 @@
+today: 3/4
+
+
+
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/1/17759.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/201/22515.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/201/37949.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/102/27575.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/102/34111.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/102/48075.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/4/23968.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/201/25413.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/1/22861.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/201/53380.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/1/24213.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/1/15991.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/102/35419.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/pants dataset/14289.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/102/48683.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/3/11661.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/201/36317.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/3/12197.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/1/21912.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/2/30278.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/4/16205.json
+../Overfitting/webtoon_segmentation/dataset/label8_free_draw/201/1584.json
