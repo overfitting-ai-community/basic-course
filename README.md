@@ -190,7 +190,16 @@ python get_toon_data.py
 #### experiment 7) Pretrained(Love Revolution) + Transfer learning(Free draw) -> Test(Free draw)
 - Evaluation results for bbox:
 
+![bbox1](https://user-images.githubusercontent.com/56310078/117834119-deb08d00-b2b1-11eb-862e-e1601b8f7f19.png)  
+![bbox2](https://user-images.githubusercontent.com/56310078/117834124-df492380-b2b1-11eb-8e35-dc81440db29c.png)  
+![bbox3](https://user-images.githubusercontent.com/56310078/117834126-dfe1ba00-b2b1-11eb-962d-b0662d7b205c.png)  
+
+
 - Evaludation results for Segm:
+
+![segm1](https://user-images.githubusercontent.com/56310078/117834127-dfe1ba00-b2b1-11eb-8339-2b759a71587f.png)  
+![segm2](https://user-images.githubusercontent.com/56310078/117834130-e07a5080-b2b1-11eb-9d22-63243c60d759.png)  
+![segm3](https://user-images.githubusercontent.com/56310078/117834133-e07a5080-b2b1-11eb-8f5b-def8b15f32f1.png)  
 
 
 #### Examples of output images (experiment 1):
@@ -242,7 +251,7 @@ Download pre-trained model from [Google Drive](https://drive.google.com/drive/fo
 
 ### Run  
 - Here is the [Colab Notebook](https://github.com/overfitting-ai-community/basic-course/blob/main/Webtoon_Segmentation_Detectron2_Tutorial.ipynb) to run Detectron2.
-- Here is the [Colab Notebook](#) to run Mask-RCNN.
+- Here is the [Colab Notebook](https://github.com/overfitting-ai-community/basic-course/blob/main/Webtoon_Segmentation_MaskRCNN_Tutorial.ipynb) to run Mask-RCNN.
 
 ## Create Segmentation Results
 
@@ -289,4 +298,23 @@ We use detectron2 in our research
   year =         {2019}
 }
 ```
+
+## Citing Mask R-CNN  
+
+### Reference (repo)
+
+[akTwelve / cocosynth](https://github.com/akTwelve/cocosynth)  
+We use Mask R-CNN in our research  
+
+```BibTeX
+@misc{matterport_maskrcnn_2017,
+  title={Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow},
+  author={Waleed Abdulla},
+  year={2017},
+  publisher={Github},
+  journal={GitHub repository},
+  howpublished={\url{https://github.com/matterport/Mask_RCNN}},
+}
+```
+
 
