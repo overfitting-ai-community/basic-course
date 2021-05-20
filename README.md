@@ -15,7 +15,10 @@ see more information, go to title ['Get Webtoon Image'](#get-webtoon-image)
 see more information, go to title ['Webtoon-Segmentation'](#webtoon-segmentation)  
   
 **Third**, we created segmentation results. it can be used at colorization datasets, etc...   
-see more information, got to title ['Create Segmentation Results'](#create-segmentation-results)
+see more information, go to title ['Create Segmentation Results'](#create-segmentation-results)  
+
+**Last**, we share our insights from proceeding this toy project.  
+see more information, go to  title ['Conclusion(Our insight)'](#conclusionour-insight)  
   
 
 ## Get Webtoon Image  
@@ -101,6 +104,10 @@ python get_toon_data.py
 - Love revolution  
   <img src="https://user-images.githubusercontent.com/56310078/115048079-2989ef80-9f14-11eb-9d9e-b5e8bec67819.png" width="500">  
   
+#### Iterations
+- train(Free draw + Love revolution): 20000
+- pretrain: 20000
+- transfer learning: 10000~
 
 #### experiment 1) Trained(Free draw + Love Revolution) -> Test(Free draw + Love Revolution)
 - Evaluation results for bbox:
@@ -273,18 +280,18 @@ refer to the last cell of [detectron2 colab guide](https://github.com/overfittin
 
 ## Conclusion(Our insight)  
 
-- 실험 결과를 비교해보자면
+- 실험 결과
     - 연애혁명, 프리드로우 모두 각 데이터셋만 학습한 경우와 두 데이터셋을 함께 학습한 경우보다, 서로의 데이터셋으로 pre-train 후 transfer learning 했을 때 결과가 더욱 좋았다.
     - case **연애혁명**:
-      - pretrained(프리드로우) + transferlearning(연애혁명) -> test(연애혁명)의 **AP: 55.283**
-      - train(연애혁명) -> test(연애혁명)의 **AP: 48.284**
-      - train(연애혁명 + 프리드로우) -> test(연애혁명)의 **AP: 52.604**
+      - pretrained(프리드로우) + transfer learning(연애혁명) -> test(연애혁명)의 **AP 55.283**
+      - train(연애혁명) -> test(연애혁명)의 **AP 48.234**
+      - train(연애혁명 + 프리드로우) -> test(연애혁명)의 **AP 52.604**
     - case **프리드로우**:
-      - pretrained(연애혁명) + transferlearning(프리드로우) -> test(프리드로우)의 **AP: 46.994**
-      - train(프리드로우) -> test(프리드로우)의 **AP: 43.321**
-      - train(연애혁명 + 프리드로우) -> test(프리드로우)의 **AP: 30.942**
-    - pretrained후 transfer learning을 연애혁명 + 프리드로우의 경우는 실험하지 않았다.
-    - 최종 학습된 결과가 각 웹툰에 대해 원하는 만큼의 오버피팅이 되었는지는 확인해보지 않았다.(더 오래 학습해보지 않았다.)
+      - pretrained(연애혁명) + transfer learning(프리드로우) -> test(프리드로우)의 **AP 46.994**
+      - train(프리드로우) -> test(프리드로우)의 **AP 43.321**
+      - train(연애혁명 + 프리드로우) -> test(프리드로우)의 **AP 30.942**
+    - pretrained 후 transfer learning을 연애혁명 + 프리드로우의 경우는 실험하지 않았다.
+    - 최종 학습된 결과가 각 웹툰에 대해 원하는 만큼의 오버피팅이 되었는지는 확인해보지 않았다. 더 오래 학습해보지 않았다.
 - 웹툰에서 등장인물에 대한 신체 특징(헤어), 의상을 자동채색하기 위해서, 웹툰 등장인물에 대한 Segmentation을 진행하였다. 
 - 자동채색을 위해 데이터셋을 Segmentation 하는 것까지 진행하였고, 그 결과가 'Create Segmentation Results' 부분이다.
 - 우리의 목표는 한 컷의 이미지를 전부 자동채색하는 것이 아닌 특정 부분, 부분을 자동채색하는 것이다. 따라서 모델의 학습을 위해 특정 클래스로 세분화했다.
@@ -304,8 +311,8 @@ refer to the last cell of [detectron2 colab guide](https://github.com/overfittin
 ## Additional Information
 
 All images used in dataset are copyrighted in `Naver Webtoon`.  
-If there is a related problem, I will correct or delete the repository immediately.  
-Also, I would like to inform you that the team members are not related to Naver Webtoon.  
+If there is a related problem, We will correct or delete the repository immediately.  
+Also, We would like to inform you that our team members are not related to Naver Webtoon.  
   
 
 ## Citing Detectron2
