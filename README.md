@@ -17,8 +17,8 @@ see more information, go to title ['Webtoon-Segmentation'](#webtoon-segmentation
 **Third**, we created segmentation results. it can be used at colorization datasets, etc...   
 see more information, go to title ['Create Segmentation Results'](#create-segmentation-results)  
 
-**Last**, we share our insights from proceeding this toy project.  
-see more information, go to  title ['Conclusion(Our insight)'](#conclusionour-insight)  
+**Last**, we shared our insights from proceeding this toy project.  
+see more information, go to  title ['Conclusion(Our insights)'](#conclusionour-insights)  
   
 
 ## Get Webtoon Image  
@@ -91,12 +91,12 @@ python get_toon_data.py
 ### Results
 
 #### Trained dataset
-- Note: Free draw 프리드로우 (episode: random part(0.9 percent of entire images) of 1,2,3,4,5,102,201)
-- Note: Love revolution 연애혁명 (episode: random part(0.9 percent of entire images) of 2,3,4,5,6,7,8)
+- Note: Free draw 프리드로우 (random part(0.9 percent of entire images) of episode 1,2,3,4,5,102,201)
+- Note: Love revolution 연애혁명 (random part(0.9 percent of entire images) of episode 2,3,4,5,6,7,8)
 
 #### Test dataset
-- Note: Free draw 프리드로우 (episode: another random part(0.1 percent of entire images) of 1,2,3,4,5,102,201)
-- Note: Love revolution 연애혁명 (episode: another random part(0.1 percent of entire images) of 2,3,4,5,6,7,8)
+- Note: Free draw 프리드로우 (another random part(0.1 percent of entire images) of episode 1,2,3,4,5,102,201)
+- Note: Love revolution 연애혁명 (another random part(0.1 percent of entire images) of episode 2,3,4,5,6,7,8)
 - Free draw + Love revolution  
   <img src="https://user-images.githubusercontent.com/56310078/115048075-27279580-9f14-11eb-92a1-248a249bd5cb.png" width="500">  
 - Only Free draw  
@@ -212,7 +212,7 @@ python get_toon_data.py
 #### Examples of output images (experiment 1):
 
 - Results of Experiment 1(Trained(Free draw + Love Revolution) -> Test(Free draw + Love Revolution)) 
-- Free draw(episode: validation set of 1,2,3,4,5,102,201)  
+- Free draw (test set of episode (1,2,3,4,5,102,201))  
 
 | model prediction | original | 
 |:---:|:---:|
@@ -238,7 +238,7 @@ python get_toon_data.py
 |![48683](https://user-images.githubusercontent.com/56310078/115058490-44faf780-9f20-11eb-9e5e-1c8c48b44712.jpg)|![48683](https://user-images.githubusercontent.com/56310078/115060313-a91ebb00-9f22-11eb-8fae-20c426ece8b2.jpg)|
 |![53380](https://user-images.githubusercontent.com/56310078/115058491-45938e00-9f20-11eb-8945-8ca83beffb0f.jpg)|![53380](https://user-images.githubusercontent.com/56310078/115060315-a9b75180-9f22-11eb-853e-b165855cd132.jpg)|
 
-- Love revolution(episode: (validation set of 2,3,4,5,6,7,8) + 10)  
+- Love revolution(test set of episode (2,3,4,5,6,7,8) + episode(10))  
 
 | model prediction | original | 
 |:---:|:---:|
@@ -278,20 +278,20 @@ refer to the last cell of [detectron2 colab guide](https://github.com/overfittin
 | ![28738](https://user-images.githubusercontent.com/56310078/115044551-9602ef80-9f10-11eb-8585-1f82c9d6bae0.jpg) |![33124](https://user-images.githubusercontent.com/56310078/115045464-7d470980-9f11-11eb-8f93-63db110e8a84.jpg)|![18688](https://user-images.githubusercontent.com/56310078/115045823-d9119280-9f11-11eb-9bef-3cc0bc3f41d9.jpg) outer||
 
 
-## Conclusion(Our insight)  
+## Conclusion(Our insights)  
 
 - 실험 결과
-    - 연애혁명, 프리드로우 모두 각 데이터셋만 학습한 경우와 두 데이터셋을 함께 학습한 경우보다, 서로의 데이터셋으로 pre-train 후 transfer learning 했을 때 결과가 더욱 좋았다.
-    - case **연애혁명**:
-      - pretrained(프리드로우) + transfer learning(연애혁명) -> test(연애혁명)의 **AP 55.283**
-      - train(연애혁명) -> test(연애혁명)의 **AP 48.234**
-      - train(연애혁명 + 프리드로우) -> test(연애혁명)의 **AP 52.604**
-    - case **프리드로우**:
-      - pretrained(연애혁명) + transfer learning(프리드로우) -> test(프리드로우)의 **AP 46.994**
-      - train(프리드로우) -> test(프리드로우)의 **AP 43.321**
-      - train(연애혁명 + 프리드로우) -> test(프리드로우)의 **AP 30.942**
+    - 연애혁명, 프리드로우 각 데이터셋만 학습한 (2)의 경우와 두 데이터셋을 함께 학습한 (3)의 경우보다, 서로의 데이터셋으로 pre-train 후 transfer learning 했는 (1)의 결과가 더욱 좋았다.
+        - case **연애혁명**:
+            - (1) pretrained(프리드로우) + transfer learning(연애혁명) -> test(연애혁명)의 **AP 55.283**
+            - (2) train(연애혁명) -> test(연애혁명)의 **AP 48.234**
+            - (3) train(연애혁명 + 프리드로우) -> test(연애혁명)의 **AP 52.604**
+        - case **프리드로우**:
+            - (1) pretrained(연애혁명) + transfer learning(프리드로우) -> test(프리드로우)의 **AP 46.994**
+            - (2) train(프리드로우) -> test(프리드로우)의 **AP 43.321**
+            - (3) train(연애혁명 + 프리드로우) -> test(프리드로우)의 **AP 30.942**
     - pretrained 후 transfer learning을 연애혁명 + 프리드로우의 경우는 실험하지 않았다.
-    - 최종 학습된 결과가 각 웹툰에 대해 원하는 만큼의 오버피팅이 되었는지는 확인해보지 않았다. 더 오래 학습해보지 않았다.
+    - 최종 학습된 결과가 최선의 iterations 인지는 확인해보지 않았다.
 - 웹툰에서 등장인물에 대한 신체 특징(헤어), 의상을 자동채색하기 위해서, 웹툰 등장인물에 대한 Segmentation을 진행하였다. 
 - 자동채색을 위해 데이터셋을 Segmentation 하는 것까지 진행하였고, 그 결과가 'Create Segmentation Results' 부분이다.
 - 우리의 목표는 한 컷의 이미지를 전부 자동채색하는 것이 아닌 특정 부분, 부분을 자동채색하는 것이다. 따라서 모델의 학습을 위해 특정 클래스로 세분화했다.
